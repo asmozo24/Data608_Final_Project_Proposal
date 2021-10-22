@@ -1,0 +1,113 @@
+---
+title: |
+  <center> The City University of New York School of Professional Studies </center>
+  <br>
+  <center>  Knowledge and Visual Analytics (DATA 608) </center>
+  
+  <br><br><br><br><br>  
+  <center> Final Project Proposal</center>
+  <center> Data Insights to Save the life of U.S. Military </center>
+  <br><br><br><br>
+  
+author: |
+  <center> Alexis Mekueko </center>
+  <center> email:  alexis.mekueko08@login.cuny.edu </center> <br><br><br>
+date: |
+  <center> 11/13/2020 </center><br><br>
+  <center> Github Link: https://github.com/asmozo24/DATA607_Project_Proposal </center>
+  <center> Web link: https://rpubs.com/amekueko/825651 </center><br><br>
+output:
+  pdf_document: default
+  html_document:
+    #template: default.html
+    #css: your.css
+    df_print: paged
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r load-packages, results='hide',warning=FALSE, message=FALSE, echo=FALSE}
+
+library(tidyverse) #loading all library needed for this assignment
+
+library(data.table)
+
+library(dbplyr)
+
+library(gplots)
+library(ggplot2)
+library(scales)
+
+library(qqplotr)
+
+#library(psych)
+
+
+```
+
+
+This proposal must include: a link to the data source, an explanation of what you want to show, why this is relevant to a current policy, business, or justice issue, and which technologies you plan to use.
+
+## Benefits
+The interest of exploring U.S. Military death data is visualize these death to the public so that something can be done to reduce this death. We all know that U.S. Military involves politicians, technology, industry, healthcare and government. Thus, by displaying this data to the pblic, all these entities can contribute each at their power level to take major decisions that could end up saving more lifes in military. These decisions can be to improving military mechanics, to helping politicians to make better policy, to adjusting military strategy, to doctors and paramedical to rethink and find appropriate health-plan for military personnels.  
+I plan to become a consultant using my skills as data scientist in various domain of the society to present meaningful report to government entities, companies, and organizations to help them in decision making. So, this project will contribute to building skills necessary for one to be successful in data science.
+
+## Research questions
+
+What is the death rate of military personnels over the course of 20 years?
+What is the death rate of military personnels in active duty of the course of 20 years?
+What is the death ration of military personnels by accident and illness? 
+Do military personnels dies more by homicide than combat?
+Dp military personnels die more by illness than accident?
+
+## Data source
+We were looking at open-source data like kaggle.com and found some interesting dataset about military that no one has not made a any contribution on it. The original source of the dataset ('ActiveDutyDeathNo') is from: Defense Casualty Analysis System (DCAS) , https://dcas.dmdc.osd.mil/dcas/pages/report_by_year_manner.xhtml. 
+Data is completely free and represents 20 years (1980-2010) of data collected on U.S. Active Duty Military Deaths. The details of the dataset can be seen below:
+
+```{r echo=FALSE}
+
+# load the text file which has the description of all the variable.
+us_d <- read.csv("https://raw.githubusercontent.com/asmozo24/Data608_Final_Project_Proposal/main/U.S.%20Military%20Deaths%20by%20cause%201980-2010.csv", stringsAsFactors=FALSE)
+
+head(us_d)
+str(us_d)
+
+```
+
+
+## Overall Workflow
+We will use OSEMN Process:
+<ol>
+1.  Obtain Data
+    - Unstructured Data
+    - Github
+    -R Programming
+    -spyder-Python
+2.  Scrub Data
+    - organizing data
+    - Tidying up data
+3.  Explore Data
+    - Inspect data and understand the characteristic of the data
+    - Looking for relationship, patterns and values, 
+4.  Model Data
+    - Explore forecast 
+    - Explore other data visualization charts
+    - explore building apps to display plots: Shiny, Dash
+5.  Interpret Results
+    - Explaining findings (Answering the research question)
+    - Actionable information
+</ol>
+    
+## Challenges
+There are few challenges in this project to be overcome:
+<ol>
+1- Due to sensibility of dataset, it can be to be neutral. 
+2- Interpreting Results: This is going to be crucial. How do we present the data? Which format will be suitable? 
+</ol><br>
+<br>
+<br>
